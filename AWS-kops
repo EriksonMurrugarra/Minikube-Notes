@@ -10,7 +10,7 @@ create an user with administrator access
 ## Generate SSH
 > ssh-keygen -f .ssh/id_rsa
 
-Access key ID,Secret access key 'kops' User
+Access key ID,Secret access key 'kops' User with AdministratorAccess
 AKIAIKMUJWSC3FWIC7TQ
 dn5awlcR/POPFEVp+hI2J+9y8NxGUkpuRB+h+czC
 
