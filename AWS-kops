@@ -1,0 +1,20 @@
+# AWS Kops
+
+## Dependencies
+aws on local machine
+create an user with administrator access
+
+## Configure
+> aws configure
+
+Access key ID,Secret access key
+AKIAICYTIELGKKTLDIQA,P8ZTkaLxf99xbO7qAo/NM/k7CuUKmu6KLt+maLmz
+
+## Check region close to you
+http://www.cloudping.info
+
+## Create hosted domain 1$/2 per month
+
+## Installing the cluster
+
+> kops create cluster --name=kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson --zones=us-east-2 --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns=kubernetes.eriksonmurrugarra.com
