@@ -30,3 +30,17 @@ http://www.cloudping.info
 
 ## Update
 > kops rolling-update cluster --state=s3://kops-state-erikson
+
+## Test
+
+> kubectl run hello-world --image=gcr.io/google_containers/echoserver:1.4 --port=8080
+> kubectl expose deployment hello-world --type=NodePort
+> kubectl get service
+
+## Change Security group in the master to accept the port for the service
+## Open the url
+> http://api.kubernetes.eriksonmurrugarra.com:32402
+
+
+## Delete the cluster
+> kops delete cluster kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson
