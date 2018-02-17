@@ -9,3 +9,5 @@ usermod -a -G docker-ec2-user
 exit 
 
 ssh again to see the s hanches
+
+sudo pip install docker-compose
