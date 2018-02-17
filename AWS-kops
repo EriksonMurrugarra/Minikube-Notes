@@ -11,8 +11,8 @@ create an user with administrator access
 > ssh-keygen -f .ssh/id_rsa
 
 Access key ID,Secret access key 'kops' User with AdministratorAccess
-AKIAIKMUJWSC3FWIC7TQ
-dn5awlcR/POPFEVp+hI2J+9y8NxGUkpuRB+h+czC
+xxxAKIAIKxxxxMUxxxJxxxWSCxxx3FxxxWIxxxC7xxxTQ
+\dn5\awl\cR/\PO\\P\F\E\Vp+h\I2J\+9y\\\\8N\xG\\U\k\p\u\R\B\+\h\+czC
 
 ## Check region close to you
 http://www.cloudping.info
