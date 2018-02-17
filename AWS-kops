@@ -7,8 +7,12 @@ create an user with administrator access
 ## Configure
 > aws configure
 
-Access key ID,Secret access key
-AKIAICYTIELGKKTLDIQA,P8ZTkaLxf99xbO7qAo/NM/k7CuUKmu6KLt+maLmz
+## Generate SSH
+> ssh-keygen -f .ssh/id_rsa
+
+Access key ID,Secret access key 'kops' User
+AKIAIKMUJWSC3FWIC7TQ
+dn5awlcR/POPFEVp+hI2J+9y8NxGUkpuRB+h+czC
 
 ## Check region close to you
 http://www.cloudping.info
@@ -17,4 +21,12 @@ http://www.cloudping.info
 
 ## Installing the cluster
 
-> kops create cluster --name=kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson --zones=us-east-2 --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns=kubernetes.eriksonmurrugarra.com
+> kops create cluster --name=kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson --zones=us-east-2c --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.eriksonmurrugarra.com
+
+
+## Launching the cluster
+
+> kops update cluster kubernetes.eriksonmurrugarra.com --yes --state=s3://kops-state-erikson
+
+## Update
+> kops rolling-update cluster --state=s3://kops-state-erikson
