@@ -42,5 +42,5 @@ http://www.cloudping.info
 > http://api.kubernetes.eriksonmurrugarra.com:32402
 
 
-## Delete the cluster
-> kops delete cluster kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson
+## Delete the cluster (--yes: to delete all the resources)
+> kops delete cluster kubernetes.eriksonmurrugarra.com --state=s3://kops-state-erikson --yes
