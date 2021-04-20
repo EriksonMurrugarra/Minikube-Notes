@@ -1,26 +1,26 @@
 
 
 chrome://net-internals/#proxy
-http://autoproxy.verizon.com/cgi-bin/getProxy
+http://autoproxy.mycompany.com/cgi-bin/getProxy
 
-set http_proxy=http://murruer:rusia2018.@tpaproxy.verizon.com:5150
+set http_proxy=http://murruer:pass.@tpaproxy.mycompany.com:5150
 
-set https_proxy=http://murruer:rusia2018.@tpaproxy.verizon.com:5150
+set https_proxy=http://murruer:pass.@tpaproxy.mycompany.com:5150
 
-set no_proxy=onestash.verizon.com
+set no_proxy=onestash.mycompany.com
 
 ** Create a new Docker
 
-docker-machine create -d virtualbox --engine-env HTTP_PROXY=http://murruer:rusia2018.@tpaproxy.verizon.com:5150 --engine-env HTTPS_PROXY=http://murruer:rusia2018.@tpaproxy.verizon.com:5150     --engine-env NO_PROXY=onestash.verizon.com new
+docker-machine create -d virtualbox --engine-env HTTP_PROXY=http://murruer:rusia2018.@tpaproxy.mycompany.com:5150 --engine-env HTTPS_PROXY=http://murruer:pass.@tpaproxy.mycompany.com:5150     --engine-env NO_PROXY=onestash.mycompany.com new
 
 docker-machine env new  | Invoke-Expression
 
 
 ** Minikube con proxy
- minikube start --docker-env HTTP_PROXY=http://murruer:rusia2018.@tpaproxy.verizon.com:5150 --docker-env HTTPS_PROXY=http://murruer:rusia2018.@tpaproxy.verizon.com:5150
+ minikube start --docker-env HTTP_PROXY=http://murruer:pass.@tpaproxy.mycompany.com:5150 --docker-env HTTPS_PROXY=http://murruer:rusia2018.@tpaproxy.mycompany.com:5150
 
-set http_proxy=http://murruer:rusia2018.@tpaproxy.verizon.com:5150, $(minikube ip)
-set https_proxy=http://murruer:rusia2018.@tpaproxy.verizon.com:5150, $(minikube ip)
+set http_proxy=http://murruer:pass.@tpaproxy.mycompany.com:5150, $(minikube ip)
+set https_proxy=http://murruer:pass.@tpaproxy.mycompany.com:5150, $(minikube ip)
 set no_proxy=192.168.99.100
 
 kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
